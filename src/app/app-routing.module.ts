@@ -6,11 +6,11 @@ import  {CurdComponent} from './curd/curd.component';
 import  {AddemplyeComponent} from './addemplye/addemplye.component';
 import  {EditComponent} from './edit/edit.component';
 import  {RegisterComponent} from './register/register.component';
-
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
 
 {path:'', component:LoginComponent},
-{path:'dashboard', component:DashboardComponent},
+{path:'dashboard', component:DashboardComponent, canActivate: [AuthGuard]},
 {path:'crud', component:CurdComponent},
 {path:'add', component:AddemplyeComponent},
 {path:'edit', component:EditComponent},
