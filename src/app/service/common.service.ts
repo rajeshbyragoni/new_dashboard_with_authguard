@@ -32,6 +32,31 @@ export class CommonService {
 	}
 
 
+		// register page start here ...
+
+	
+	getRegisterData(name, email, password):Observable<any> {
+     
+     const url ='https://gowtham-rest-api-crud.herokuapp.com/register';
+     const token = localStorage.getItem('token');
+     const data= new FormData();
+     data.append('name', name);
+     data.append('email', email);
+     data.append('password', password);
+     return this.http.post<any>(url, data)
+     .pipe(map((Response:Response)=>{
+          return Response;
+     }), catchError((error:Response)=>{
+           return throwError(error.status); 
+     }));
+	
+	}
+
+
+	// register page end here ....
+	
+
+
 	// get method start here ....
 
 	getListData():Observable<any> {

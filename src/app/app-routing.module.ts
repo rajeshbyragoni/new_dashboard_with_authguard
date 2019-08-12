@@ -5,6 +5,7 @@ import  {DashboardComponent} from './dashboard/dashboard.component';
 import  {CurdComponent} from './curd/curd.component';
 import  {AddemplyeComponent} from './addemplye/addemplye.component';
 import  {EditComponent} from './edit/edit.component';
+import  {RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
 {path:'crud', component:CurdComponent},
 {path:'add', component:AddemplyeComponent},
 {path:'edit', component:EditComponent},
+{path:'register', component:RegisterComponent},
 
 ];
 

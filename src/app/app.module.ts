@@ -11,6 +11,7 @@ import { CurdComponent } from './curd/curd.component';
 import { AddemplyeComponent } from './addemplye/addemplye.component';
 import  {AuthGuard} from './auth.guard';
 import { EditComponent } from './edit/edit.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EditComponent } from './edit/edit.component';
     HeaderComponent,
     CurdComponent,
     AddemplyeComponent,
-    EditComponent
+    EditComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

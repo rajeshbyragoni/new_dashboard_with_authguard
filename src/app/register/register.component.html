@@ -1,0 +1,103 @@
+   <div class="carousel slide carousel-fade" data-ride="carousel">
+
+   	<!-- Wrapper for slides -->
+   	<div class="carousel-inner" role="listbox">
+   		<div class="item active">
+   		</div>
+   		<div class="item">
+   		</div>
+   		<div class="item">
+   		</div>
+   	</div>
+   </div>
+
+   <div class="container-fluid">
+   	<div class="row">
+   		<div class="col-md-6 nopad">
+   			<div class="ct_mn">
+
+   				<div class="ds60">  
+   					<div class="col-md-6"> 
+   						<h2><img src="assets/img/logo-w.png"></h2>
+   						<h2>WELCOME TO ADMIN</h2>
+   						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+   					</div>
+   				</div>
+
+
+   			</div> 
+   		</div>
+   		<div class="col-md-6 nopad">
+   			<div class="lgn_m">
+   				<div class="ds60">  
+
+   					<div class="col-md-5"> 
+
+   						<form [formGroup]="registerData">
+   							<div class="col-md-12">
+   								<div class="usrlgn">
+   									<img src="assets/img/user.png">
+   								</div> 
+   								<br/>
+   							</div>
+
+   							<div class="col-md-12">
+   								<div class="form-group">
+   									
+   									<input type="text" class="form-control" name="username" placeholder="User name" formControlName="name" #name>
+   									<div
+   									*ngIf="registerData.controls['name'].invalid && (registerData.controls['name'].dirty ||  registerData.controls['name'].touched)"
+   									class="text-danger">
+   									<div *ngIf="registerData.controls['name'].errors.required">
+   										Name is required.
+   									</div>
+   								</div>
+   							</div>
+
+   						</div>
+   						<div class="col-md-12">
+   							<div class="form-group">
+
+   								<input type="text" class="form-control" name="username" placeholder="User name" formControlName="username" #username>
+   								<div
+   								*ngIf="registerData.controls['username'].invalid && (registerData.controls['username'].dirty ||  registerData.controls['username'].touched)"
+   								class="text-danger">
+   								<div *ngIf="registerData.controls['username'].errors.required">
+   									email Name is required.
+   								</div>
+   							</div>
+
+   						</div>
+   					</div>
+   					<div class="col-md-12">
+   						<div class="form-group">
+   							
+   							<input type="password" class="form-control" name="password" placeholder="Password" formControlName="password" #password>
+   							<div
+   							*ngIf="registerData.controls['password'].invalid && (registerData.controls['password'].dirty ||  registerData.controls['password'].touched)"
+   							class="text-danger">
+   							<div *ngIf="registerData.controls['password'].errors.required">
+   								password is required.
+   							</div>
+   						</div>
+
+   					</div>
+   				</div>
+   				<div class="col-md-12">
+   					<div class="row">
+   					<div class="col-md-6">
+    <label class="fgp sigup" [routerLink] ="['/']"> Login </label>
+  </div><div class="col-md-6">
+   					<button type="submit" class="btn btn-default btlg pull-right" [disabled]="registerData.pristine || registerData.invalid" (click)="registerClick(name.value, username.value,  password.value)">Sign Up <i id="load" class="fa fa-spinner fa-spin" style="display: none;"></i></button>
+   				</div>
+
+   				</div>
+   				</div>
+
+
+   			</form>
+   		</div>
+   	</div>
+   </div>
+</div>
+</div>
