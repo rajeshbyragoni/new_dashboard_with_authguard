@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="Dashboard_mn">
+	<div class="container-fluid">
+		<div class="card pdtb20">
+
+		<h1>Employee Add </h1>
+
+		<form [formGroup]="dataForm">
+			<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="name">name</label>
+					<input type="text" class="form-control" name="name" formControlName="name" #name>
+					<div
+					*ngIf="dataForm.controls['name'].invalid && (dataForm.controls['name'].dirty ||  dataForm.controls['name'].touched)"
+					class="text-danger">
+					<div *ngIf="dataForm.controls['name'].errors.required">
+						name Name is required.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="phone">phone</label>
+				<input type="text" class="form-control" name="phone" formControlName="phone" #phone>
+				<div
+				*ngIf="dataForm.controls['phone'].invalid && (dataForm.controls['phone'].dirty ||  dataForm.controls['phone'].touched)"
+				class="text-danger">
+				<div *ngIf="dataForm.controls['phone'].errors.required">
+					phone Name is required.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="email">email</label>
+			<input type="text" class="form-control" name="email" formControlName="email" #email>
+			<div
+			*ngIf="dataForm.controls['email'].invalid && (dataForm.controls['email'].dirty ||  dataForm.controls['email'].touched)"
+			class="text-danger">
+			<div *ngIf="dataForm.controls['email'].errors.required">
+				email Name is required.
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+		<label for="emp_id">emp_id</label>
+		<input type="text" class="form-control" name="emp_id" formControlName="emp_id" #emp_id>
+		<div
+		*ngIf="dataForm.controls['emp_id'].invalid && (dataForm.controls['emp_id'].dirty ||  dataForm.controls['emp_id'].touched)"
+		class="text-danger">
+		<div *ngIf="dataForm.controls['emp_id'].errors.required">
+			emp_id Name is required.
+		</div>
+	</div>
+</div>
+</div>
+<div class="col-md-6">
+	<div class="form-group">
+		<label for="title">company</label>
+		<input type="text" class="form-control" name="company" formControlName="company" #company>
+		<div
+		*ngIf="dataForm.controls['company'].invalid && (dataForm.controls['company'].dirty ||  dataForm.controls['company'].touched)"
+		class="text-danger">
+		<div *ngIf="dataForm.controls['company'].errors.required">
+			company Name is required.
+		</div>
+	</div>
+</div>
+</div>	
+
+
+
+<div class="col-md-6">
+	<div class="form-group">
+		<label for="location">location</label>
+		<input type="text" class="form-control" name="location" formControlName="location" #location>
+		<div *ngIf="dataForm.controls['location'].invalid && (dataForm.controls['location'].dirty ||  dataForm.controls['location'].touched)"
+		class="text-danger">
+		<div *ngIf="dataForm.controls['location'].errors.required">
+			location Name is required.
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div class="col-md-6">
+	<div class="form-group">
+		<label for="content">&nbsp;</label><br/>
+
+		<button style="width:100%" type="button" class="btn btn-default btlg" [disabled]="dataForm.pristine || dataForm.invalid" (click)="dataClick(name.value, phone.value, email.value, emp_id.value, company.value, location.value)">Submit</button>
+
+	</div>
+</div>
+</div>
+</form>
+
+</div>
+</div>
+</div>

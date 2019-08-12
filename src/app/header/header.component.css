@@ -1,0 +1,7 @@
+.active{
+	color:red; 
+}
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color:transparent !important;
+	
+}
