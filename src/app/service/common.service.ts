@@ -22,7 +22,7 @@ export class CommonService {
 		data.append('password', password);
 		return this.http.post<any>(url, data)
 		.pipe(map((Response : Response) => {
-			console.log(Response);
+			//console.log(Response);
 			return Response;
 		}), catchError((error: Response) => {
 
@@ -172,6 +172,83 @@ export class CommonService {
 
 
 	// delete method end here ....
+
+
+	// fileupload page start here ...
+
+	
+	postFile(name):Observable<any> {
+     
+     const url ='https://gowtham-rest-api-crud.herokuapp.com/fileupload';
+     const token = localStorage.getItem('token');
+     const data= new FormData();
+     data.append('token', token);
+     if (name !== undefined) {
+            data.append('file', name);
+        }
+     return this.http.post<any>(url, data)
+     .pipe(map((Response:Response)=>{
+     	//console.log(Response);
+          return Response;
+     }), catchError((error:Response)=>{
+           return throwError(error.status); 
+     }));
+	
+	}
+
+
+	// fileupload page end here ....
+
+
+
+
+		// fileupload listdata page start here ...
+
+	
+	
+	/// get id/////
+
+	getFile():Observable<any> {
+		const token = localStorage.getItem('token')
+		const url ='https://gowtham-rest-api-crud.herokuapp.com/fileupload';
+		const params = new HttpParams().set('token', token);
+		return this.http.get<any>(url,  {params})
+		.pipe(map((Response : Response) => {
+			return Response;
+
+		}), catchError((error: Response) => {
+
+			return throwError(error.status);
+
+		}));
+	}
+
+
+	/// get id/////
+
+
+	/// deletelist data id/////
+
+	deleteFile(id):Observable<any> {
+		const token = localStorage.getItem('token')
+		const url ='https://gowtham-rest-api-crud.herokuapp.com/filedelete/'+ id;
+		const params = new HttpParams().set('token', token);
+		return this.http.delete<any>(url,  {params})
+		.pipe(map((Response : Response) => {
+			return Response;
+
+		}), catchError((error: Response) => {
+
+			return throwError(error.status);
+
+		}));
+	}
+
+
+	/// deletelist data id/////
+
+
+	// fileupload listdata page end here ....
 
 
 }

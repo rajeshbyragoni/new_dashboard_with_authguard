@@ -37,7 +37,7 @@ this.addCreateDataForm();
 
 	}
 		dataClick(name, phone, email, emp_id, company, location){
-		console.log(111);
+		//console.log(111);
 		this._CommonService.addListData(name, phone, email, emp_id, company, location).subscribe(
 			result => {
 				if (result.status) {

@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
 		this._CommonService.getRegisterData(name, username, password).subscribe(
 
 			result=>{
-				console.log(result);
+				//console.log(result);
 			}, error=>{
 				console.log(error.toString());
 			}

@@ -61,7 +61,7 @@ export class EditComponent implements OnInit {
 		editClick(name, phone, email, emp_id, company, location){
 		this._CommonService.updateListData(name, phone, email, emp_id, company, location, this.id).subscribe(
 			result => {
-				console.log(result.employee);
+				//console.log(result.employee);
 				if(result.status){
 					this.router.navigate(['/crud']);
 				}

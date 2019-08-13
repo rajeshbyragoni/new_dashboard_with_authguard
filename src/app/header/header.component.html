@@ -14,6 +14,7 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/crud" [routerLinkActive] ="'active'" [routerLinkActiveOptions]="{exact: true}"><img src="/assets/img/catelog-ico.png">  Form</a>
       </li>
+      <li><a class="dropdown-item" routerLink="/fileupload"><i class="fa fa-user"></i> File-upload</a></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <img src="/assets/img/catelog-ico.png">  Cotalog
@@ -35,7 +36,6 @@
       <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><span class="usrne"><img src="/assets/img/user.png"></span> sivakumar</a>
             <ul class="dropdown-menu tp120">
-              <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Edit Profile</a></li>
               <li><a class="dropdown-item" href="#"><i class="fa fa-unlock"></i> Change Password</a></li>
               <li><a class="dropdown-item" (click) = "logOut()"><i class="fa fa-sign-out"></i> Logout</a></li>
 

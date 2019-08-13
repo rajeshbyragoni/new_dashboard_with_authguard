@@ -6,6 +6,7 @@ import  {CurdComponent} from './curd/curd.component';
 import  {AddemplyeComponent} from './addemplye/addemplye.component';
 import  {EditComponent} from './edit/edit.component';
 import  {RegisterComponent} from './register/register.component';
+import  {FileuploadComponent} from './fileupload/fileupload.component';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 {path:'crud', component:CurdComponent, canActivate: [AuthGuard]},
 {path:'add', component:AddemplyeComponent, canActivate: [AuthGuard]},
 {path:'edit', component:EditComponent, canActivate: [AuthGuard]},
+{path:'fileupload', component:FileuploadComponent, canActivate: [AuthGuard]},
 {path:'register', component:RegisterComponent},
 
 ];

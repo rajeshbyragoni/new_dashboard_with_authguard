@@ -12,6 +12,7 @@ import { AddemplyeComponent } from './addemplye/addemplye.component';
 import  {AuthGuard} from './auth.guard';
 import { EditComponent } from './edit/edit.component';
 import { RegisterComponent } from './register/register.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RegisterComponent } from './register/register.component';
     CurdComponent,
     AddemplyeComponent,
     EditComponent,
-    RegisterComponent
+    RegisterComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,

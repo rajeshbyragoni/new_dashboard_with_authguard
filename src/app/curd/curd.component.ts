@@ -25,7 +25,7 @@ export class CurdComponent implements OnInit {
 		this._CommonService.getListData().subscribe(
 			result =>{
 				this.fullData = result.data.employees;
-				console.log(result.data.employees);
+				//console.log(result.data.employees);
 			}, error => {
 				console.log(error.toString());
 			});
